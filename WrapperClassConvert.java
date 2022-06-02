@@ -1,8 +1,11 @@
 public class WrapperClassConvert{
-    
+    // Creating method as convertToWrapper
     public static Object convertToWrapper(int obj){
+        // Initializing the wrapper class
         Integer object = Integer.valueOf(obj);
+        // using exception handling
         try{
+            // checking the condition of instance if it exist or not
             if(object instanceof Integer){
                 return object;
             }
@@ -12,6 +15,7 @@ public class WrapperClassConvert{
             }
               
         }     
+        // throws an exception
         catch (Exception e){
             System.out.println(e);
 
@@ -20,7 +24,9 @@ public class WrapperClassConvert{
         return object;
     }
     public static void main(String[] args) {
+        // creating variable
         int obj = 10;
+        // caling the method as convertToWrapper
         System.out.println(convertToWrapper(obj));
     }
 }
